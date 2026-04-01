@@ -3,10 +3,11 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
+  // <-- Phải có chữ export này!
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  async getHello() {
+  getHello() {
     return this.appService.getHello();
   }
 }
