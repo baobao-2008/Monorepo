@@ -20,7 +20,7 @@ export interface Order {
   id: string;
   customerName: string;
   phoneNumber: string;
-  items: Product[] | Tour[]; 
+  items: Product[] | Tour[];
   totalAmount: number;
   status: "PENDING" | "COMPLETED" | "CANCELLED";
 }
