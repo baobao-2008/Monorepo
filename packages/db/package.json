@@ -1,0 +1,7 @@
+{
+  "name": "@vibe/db",
+  "version": "1.0.0",
+  "dependencies": {
+    "@prisma/config": "^7.6.0"
+  }
+}

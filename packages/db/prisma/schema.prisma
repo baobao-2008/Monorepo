@@ -1,0 +1,41 @@
+// 1. Cấu hình công cụ kết nối
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 2. Cấu hình loại Database
+// Để làm MVP nhanh gọn nhất, mình chuyển sang dùng "sqlite" thay vì "postgresql"
+// SQLite là một database thu nhỏ lưu thẳng vào 1 file trong máy, không cần cài đặt phần mềm DB nặng nề!
+datasource db {
+  provider = "sqlite"
+}
+
+// 3. Bảng Sản phẩm (Hoa quả, Vải dệt)
+model Product {
+  id          String   @id @default(cuid())
+  name        String
+  category    String   // 'FRUIT' hoặc 'TEXTILE'
+  story       String
+  price       Int      // Tính theo VNĐ
+  imageUrl    String
+}
+
+// 4. Bảng Tour du lịch
+model Tour {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  price       Int
+  startDate   DateTime
+  maxPeople   Int
+}
+
+// 5. Bảng Đơn hàng
+model Order {
+  id           String   @id @default(cuid())
+  customerName String
+  phoneNumber  String
+  totalAmount  Int
+  status       String   @default("PENDING")
+  createdAt    DateTime @default(now())
+}

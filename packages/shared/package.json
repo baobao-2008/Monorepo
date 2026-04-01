@@ -1,0 +1,7 @@
+{
+  "name": "@vibe/shared",
+  "version": "1.0.0",
+  "exports": {
+    ".": "./src/schema.ts"
+  }
+}
