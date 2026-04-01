@@ -9,33 +9,38 @@ generator client {
 datasource db {
   provider = "sqlite"
 }
+model Article {
+  id        Int      @id @default(autoincrement())
+  title     String   
+  content   String   
+  imageUrl  String? 
+  createdAt DateTime @default(now())
+}
 
-// 3. Bảng Sản phẩm (Hoa quả, Vải dệt)
 model Product {
-  id          String   @id @default(cuid())
+  id          Int      @id @default(autoincrement())
   name        String
-  category    String   // 'FRUIT' hoặc 'TEXTILE'
-  story       String
-  price       Int      // Tính theo VNĐ
-  imageUrl    String
-}
-
-// 4. Bảng Tour du lịch
-model Tour {
-  id          String   @id @default(cuid())
-  title       String
+  category    String  
   description String
-  price       Int
-  startDate   DateTime
-  maxPeople   Int
+  price       Float
+  createdAt   DateTime @default(now())
 }
 
-// 5. Bảng Đơn hàng
+model Tour {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  price       Float
+  duration    String  
+}
+
 model Order {
-  id           String   @id @default(cuid())
-  customerName String
-  phoneNumber  String
-  totalAmount  Int
-  status       String   @default("PENDING")
-  createdAt    DateTime @default(now())
+  id            Int      @id @default(autoincrement())
+  customerName  String
+  customerPhone String
+  orderType     String  
+  itemId        Int    
+  totalAmount   Float
+  status        String   @default("PENDING")
+  createdAt     DateTime @default(now())
 }
