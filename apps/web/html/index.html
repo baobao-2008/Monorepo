@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BaobaoShop — Đặc Sản & Du Lịch Hà Giang</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="nav-bar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">🌿 BaobaoShop</a>
+        <div class="nav-links">
+          <a href="index.html" class="active">Trang Chủ</a>
+          <a href="admin.html">Đơn Hàng</a>
+          <a href="management.html">Quản Trị</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="main-header">
+      <p class="eyebrow">✦ Hà Giang — Vùng Cao Phía Bắc</p>
+      <h1>
+        Hệ Thống Thương Mại<br /><em
+          style="color: var(--clay); font-style: italic"
+          >Du Lịch Bản Địa</em
+        >
+      </h1>
+      <p>
+        Nền tảng kết nối đặc sản địa phương và trải nghiệm văn hóa vùng cao Hà
+        Giang đến với mọi người
+      </p>
+    </header>
+
+    <main class="container">
+      <!-- BÀI VIẾT -->
+      <section class="section-wrapper">
+        <div class="section-title">
+          <span class="tag">Vibe — Media &amp; Culture</span>
+          <h2>📖 Góc Kể Chuyện Sản Phẩm</h2>
+        </div>
+        <div id="article-list">
+          <div class="loading-skeleton skeleton-card"></div>
+          <div class="loading-skeleton skeleton-card"></div>
+        </div>
+      </section>
+
+      <!-- SẢN PHẨM & TOUR -->
+      <section class="section-wrapper">
+        <div class="section-title">
+          <span class="tag moss">Commerce &amp; Travel</span>
+          <h2>🛒 Đặc Sản &amp; Tour Du Lịch</h2>
+        </div>
+        <div id="product-list">
+          <div class="loading-skeleton skeleton-card"></div>
+          <div class="loading-skeleton skeleton-card"></div>
+        </div>
+      </section>
+
+      <!-- ĐẶT HÀNG -->
+      <section class="order-section">
+        <span class="tag indigo">Đặt Hàng Nhanh</span>
+        <h2>📝 Xác Nhận Đặt Hàng</h2>
+        <p>
+          Chọn sản phẩm ở trên rồi điền thông tin — chúng tôi sẽ liên hệ trong
+          vòng 2 giờ
+        </p>
+
+        <div id="selected-item-display" class="selected-badge empty">
+          Chưa chọn sản phẩm nào
+        </div>
+
+        <div class="form-grid">
+          <div class="input-group">
+            <label for="custName">Họ và tên khách hàng</label>
+            <input
+              type="text"
+              id="custName"
+              placeholder="Ví dụ: Nguyễn Văn A"
+              autocomplete="name"
+            />
+          </div>
+          <div class="input-group">
+            <label for="custPhone">Số điện thoại liên hệ</label>
+            <input
+              type="tel"
+              id="custPhone"
+              placeholder="Ví dụ: 0912 345 678"
+              autocomplete="tel"
+            />
+          </div>
+        </div>
+
+        <button onclick="submitOrder()" class="btn-submit">
+          XÁC NHẬN ĐẶT HÀNG NGAY
+        </button>
+
+        <div class="support-box mt-16">
+          <p>
+            Cần hỗ trợ thêm?
+            <a href="https://zalo.me/0959885858"
+              >💬 Chat Zalo với tư vấn viên</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>
+        © 2026 BaobaoShop · Đặc sản &amp; Du lịch Hà Giang · Thiết kế Enterprise
+        UI
+      </p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

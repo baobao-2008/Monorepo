@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin — Quản Lý Đơn Hàng · BaobaoShop</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="nav-bar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">🌿 BaobaoShop</a>
+        <div class="nav-links">
+          <a href="index.html">Trang Chủ</a>
+          <a href="admin.html" class="active">Đơn Hàng</a>
+          <a href="management.html">Quản Trị</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="main-header">
+      <p class="eyebrow">✦ Quản Trị Hệ Thống</p>
+      <h1>📋 Danh Sách Đơn Hàng</h1>
+      <p>
+        Theo dõi và quản lý tất cả đơn hàng từ khách hàng đặt mua đặc sản &amp;
+        tour
+      </p>
+    </header>
+
+    <main class="container">
+      <div class="admin-card">
+        <div class="admin-card-header">
+          <h2>Tất cả đơn hàng</h2>
+          <div class="search-box">
+            <span>🔍</span>
+            <input
+              type="text"
+              id="orderSearch"
+              placeholder="Tìm theo tên, SĐT..."
+            />
+          </div>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Khách Hàng</th>
+              <th>Số Điện Thoại</th>
+              <th>Mã SP</th>
+              <th>Tổng Tiền</th>
+              <th>Trạng Thái</th>
+              <th>Ngày Đặt</th>
+            </tr>
+          </thead>
+          <tbody id="admin-order-list">
+            <tr>
+              <td colspan="6" class="table-empty">Đang tải đơn hàng...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <p>© 2026 BaobaoShop Admin Panel</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

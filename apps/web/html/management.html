@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Trị Nội Dung · BaobaoShop</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="nav-bar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">🌿 BaobaoShop</a>
+        <div class="nav-links">
+          <a href="index.html">Trang Chủ</a>
+          <a href="admin.html">Đơn Hàng</a>
+          <a href="management.html" class="active">Quản Trị</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="main-header">
+      <p class="eyebrow">✦ Quản Trị Nội Dung</p>
+      <h1>⚙️ Quản Lý Nội Dung</h1>
+      <p>Đăng bài viết, thêm sản phẩm và quản lý thông tin tour du lịch</p>
+    </header>
+
+    <main class="container">
+      <div class="mgmt-grid">
+        <!-- FORM BÀI VIẾT -->
+        <div class="mgmt-card">
+          <div class="mgmt-card-header">
+            <div class="icon clay-bg">✍️</div>
+            <div>
+              <h2 style="font-size: 18px">Đăng Bài Viết Mới</h2>
+              <p style="font-size: 13px; color: var(--ink-lt)">
+                Kể chuyện sản phẩm &amp; văn hóa bản địa
+              </p>
+            </div>
+          </div>
+          <div class="mgmt-card-body">
+            <div class="form-stack">
+              <div class="input-group">
+                <label for="artTitle">Tiêu đề bài viết</label>
+                <input
+                  type="text"
+                  id="artTitle"
+                  placeholder="Ví dụ: Hành trình tìm mật ong rừng Hà Giang..."
+                />
+              </div>
+              <div class="input-group">
+                <label for="artContent">Nội dung bài viết</label>
+                <textarea
+                  id="artContent"
+                  rows="5"
+                  placeholder="Chia sẻ câu chuyện về sản phẩm, văn hóa vùng cao..."
+                ></textarea>
+              </div>
+              <button
+                id="btnAddArticle"
+                onclick="addArticle()"
+                class="btn btn-primary btn-full"
+              >
+                📝 ĐĂNG BÀI VIẾT
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- FORM SẢN PHẨM -->
+        <div class="mgmt-card">
+          <div class="mgmt-card-header">
+            <div class="icon moss-bg">📦</div>
+            <div>
+              <h2 style="font-size: 18px">Thêm Sản Phẩm / Tour</h2>
+              <p style="font-size: 13px; color: var(--ink-lt)">
+                Đặc sản địa phương &amp; trải nghiệm du lịch
+              </p>
+            </div>
+          </div>
+          <div class="mgmt-card-body">
+            <div class="form-stack">
+              <div class="form-grid" style="margin-bottom: 0">
+                <div class="input-group">
+                  <label for="prodName">Tên sản phẩm / tour</label>
+                  <input
+                    type="text"
+                    id="prodName"
+                    placeholder="Ví dụ: Mật ong bạc hà Đồng Văn"
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="prodCategory">Danh mục</label>
+                  <select id="prodCategory">
+                    <option value="Hoa quả">🍑 Hoa quả</option>
+                    <option value="Du lịch">🏔️ Du lịch</option>
+                    <option value="Ngành dệt">🧵 Ngành dệt</option>
+                    <option value="Mật ong">🍯 Mật ong</option>
+                    <option value="Thảo dược">🌿 Thảo dược</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-group">
+                <label for="prodPrice">Giá tiền (VNĐ)</label>
+                <input
+                  type="number"
+                  id="prodPrice"
+                  placeholder="Ví dụ: 250000"
+                  min="0"
+                />
+              </div>
+              <div class="input-group">
+                <label for="prodDesc">Mô tả sản phẩm</label>
+                <textarea
+                  id="prodDesc"
+                  rows="3"
+                  placeholder="Mô tả ngắn về chất lượng, nguồn gốc, đặc điểm..."
+                ></textarea>
+              </div>
+              <button
+                id="btnAddProduct"
+                onclick="addProduct()"
+                class="btn btn-moss btn-full"
+              >
+                💾 LƯU SẢN PHẨM
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">
+      <p>© 2026 BaobaoShop Management</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
