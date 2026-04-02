@@ -56,7 +56,6 @@
         </div>
       </div>
 
-      <!-- ORDERS TABLE -->
       <div class="admin-card">
         <div class="admin-card-header">
           <div>
@@ -132,7 +131,6 @@
       <p>© 2026 BaobaoShop Admin Panel · Quản lý đặc sản &amp; tour vùng cao</p>
     </footer>
 
-    <!-- DRAWER: CHI TIẾT ĐƠN HÀNG -->
     <div
       class="drawer-overlay"
       id="drawerOverlay"
@@ -155,7 +153,6 @@
       </div>
     </div>
 
-    <!-- TOAST CONTAINER -->
     <div class="toast-container" id="toast-container"></div>
 
     <script>
@@ -167,7 +164,6 @@
       const PAGE_SIZE = 10;
       let currentPage = 1;
 
-      /* ─── TOAST ─── */
       function showToast(msg, type = "success") {
         const c = document.getElementById("toast-container");
         const icons = { success: "✓", error: "✕", info: "ℹ" };
@@ -181,7 +177,6 @@
         }, 3500);
       }
 
-      /* ─── API ─── */
       async function api(path, options = {}) {
         const res = await fetch(`${API}${path}`, {
           headers: { "Content-Type": "application/json" },
@@ -190,8 +185,7 @@
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
       }
-
-      /* ─── ESCAPE HTML ─── */
+      
       function esc(str) {
         if (typeof str !== "string") return String(str ?? "");
         return str
